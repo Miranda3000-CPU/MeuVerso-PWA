@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "MeuVerso"
+description = "An offline-first Portuguese daily Bible verse PWA, based on the inspected MeuVerso Android implementation, with verse cards, sharing, local favorites and accessible installation guidance."
+version = "1.0.0"
+id = "artifacts/meuverso"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21954
+
+[services.development]
+run = "pnpm --filter @workspace/meuverso run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/meuverso", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/meuverso/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21954"
+BASE_PATH = "/"
