@@ -1,0 +1,22 @@
+{
+  "id": "./",
+  "name": "MeuVerso — Um respiro para a alma",
+  "short_name": "MeuVerso",
+  "description": "Um verso da Bíblia para acompanhar o seu dia. Funciona sem internet e guarda seus favoritos neste dispositivo.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f7f5ef",
+  "theme_color": "#f7f5ef",
+  "categories": ["lifestyle", "books"],
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
